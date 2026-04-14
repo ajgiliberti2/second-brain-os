@@ -1,0 +1,26 @@
+title: Second Brain OS
+description: A personal knowledge operating system — tool-agnostic, local-first optional, built on three open frameworks.
+baseurl: "/second-brain-os"
+url: "https://ajgiliberti2.github.io"
+
+remote_theme: just-the-docs/just-the-docs@v0.10.0
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+color_scheme: light
+
+nav_sort: order
+
+aux_links:
+  "GitHub":
+    - "https://github.com/ajgiliberti2/second-brain-os"
+  "brain CLI":
+    - "https://github.com/ajgiliberti2/llm-wiki"
+
+aux_links_new_tab: true
+
+footer_content: "Built by Anthony Giliberti. Released under MIT. Inspired by <a href='https://karpathy.ai'>Andrej Karpathy</a> and <a href='https://www.youtube.com/@nickmilo'>Nick Milo</a>."
+
+ga_tracking_anonymize_ip: true
