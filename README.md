@@ -12,9 +12,9 @@ So I built one. This is what I built and why it works for me.
 
 Everything in my system comes from three thinkers whose work I combined:
 
-**[Nick Milo's AIOS](https://www.youtube.com/@nickmilo)** — the idea that your notes vault needs an orientation layer. A small folder that tells any AI (or any person) who you are, how the vault is structured, and what it can do. Three files: `me.md`, `vault-map.md`, `skill-map.md`. Every AI conversation starts by reading these. You never re-explain your context.
+**Nick Milo's AIOS** ([nickmilo](https://www.youtube.com/@nickmilo)) — the idea that your notes vault needs an orientation layer. A small folder that tells any AI (or any person) who you are, how the vault is structured, and what it can do. Three files: `me.md`, `vault-map.md`, `skill-map.md`. Every AI conversation starts by reading these. You never re-explain your context.
 
-**[Matthias Hilse's ForeverNote](https://www.myforevernotes.com)** — one file per calendar date, forever. `april-14.md` holds every April 14 I've ever recorded, stacked by year. My morning briefing, meetings, journal, and habits all build up in one file throughout the day — not assembled all at once. Five years from now, opening that file shows me everything from that date across every year.
+**Matthias Hilse's ForeverNote** ([myforevernotes.com](https://www.myforevernotes.com)) — one file per calendar date, forever. `april-14.md` holds every April 14 I've ever recorded, stacked by year. My morning briefing, meetings, journal, and habits all build up in one file throughout the day — not assembled all at once. Five years from now, opening that file shows me everything from that date across every year.
 
 **A three-bucket knowledge base** — inspired by Nick Milo's ideaverse: everything routes to Atlas (what I know), Calendar (what happened), or Efforts (what I'm working on). Drop a file in the inbox, the AI routes it. Meeting notes fan out across all three automatically.
 
@@ -60,4 +60,4 @@ The best starting point is `me.md`. Fill in who you are and how you work. Everyt
 
 ---
 
-*Built on the work of [Nick Milo](https://www.youtube.com/@nickmilo), [Matthias Hilse](https://www.myforevernotes.com), and [Andrej Karpathy](https://karpathy.ai). MIT license.*
+*Built on the work of [Matthias Hilse](https://www.myforevernotes.com), [Nick Milo](https://www.youtube.com/@nickmilo), and [Andrej Karpathy](https://karpathy.ai). MIT license.*
