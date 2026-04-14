@@ -47,7 +47,7 @@ The AI reads the content, decides which bucket it belongs in, writes the appropr
 
 ## The `brain` CLI
 
-[`brain`](https://github.com/ajgiliberti2/llm-wiki) is a small Python CLI that powers the wiki layer. It's the only piece of code in the system.
+[`brain`](https://github.com/ajgiliberti2/second-brain) is a small Python CLI that powers the wiki layer. It's the only piece of code in the system.
 
 ```bash
 brain process-inbox          # route and ingest everything in inbox/

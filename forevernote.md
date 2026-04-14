@@ -86,3 +86,7 @@ The prompt pool lives in `AIOS/skills/journal-prompts.md` — a plain markdown f
 Most daily note systems create a note for today, then abandon it. ForeverNote inverts this: the file is permanent, the content is cumulative, and every year you use it the file becomes more valuable.
 
 The name comes from the commitment: this file lives for as long as you maintain the vault. You don't archive it, you don't delete it. You just keep writing.
+
+---
+
+*The ForeverNote pattern was created by [Matthias Hilse](https://www.myforevernotes.com). The implementation here adapts it for AI-assisted, inbox-driven vaults.*

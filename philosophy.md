@@ -61,5 +61,6 @@ This is the only design principle that matters long-term: **your notes belong to
 This system is built on the thinking of others:
 
 - **Nick Milo** — AIOS orientation layer, Atlas/Calendar/Efforts model, the idea that your notes system needs a control plane
+- **Matthias Hilse** ([myforevernotes.com](https://www.myforevernotes.com)) — the ForeverNote pattern: one file per date, forever, years stacking inside
 - **Andrej Karpathy** — the wiki-as-public-thinking ethos: write for yourself, share anyway
-- **The Obsidian community** — ForeverNote pattern, wikilink conventions, the vault as a first-class concept
+- **The Obsidian community** — wikilink conventions, the vault as a first-class concept

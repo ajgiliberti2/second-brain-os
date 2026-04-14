@@ -50,8 +50,8 @@ Open the vault in [Obsidian](https://obsidian.md) (or any markdown editor). Fill
 Requires Python 3.9+.
 
 ```bash
-git clone https://github.com/ajgiliberti2/llm-wiki
-cd llm-wiki
+git clone https://github.com/ajgiliberti2/second-brain
+cd second-brain
 pip install -e .
 ```
 

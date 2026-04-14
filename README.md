@@ -23,8 +23,8 @@ Three frameworks, one vault:
 ## Quick Start
 
 ```bash
-git clone https://github.com/ajgiliberti2/llm-wiki
-cd llm-wiki && pip install -e .
+git clone https://github.com/ajgiliberti2/second-brain
+cd second-brain && pip install -e .
 export WIKI_HOME=/path/to/your/vault
 brain process-inbox
 ```
@@ -34,8 +34,8 @@ brain process-inbox
 ## Inspired By
 
 - [Nick Milo](https://www.youtube.com/@nickmilo) — AIOS orientation layer, Atlas/Calendar/Efforts model
+- [Matthias Hilse](https://www.myforevernotes.com) — ForeverNote pattern
 - [Andrej Karpathy](https://karpathy.ai) — the wiki-as-public-thinking ethos
-- The Obsidian community — ForeverNote pattern, wikilink conventions
 
 ## License
 
