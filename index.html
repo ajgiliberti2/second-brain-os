@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Second Brain OS — Anthony Giliberti</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #222;
+      max-width: 680px;
+      margin: 60px auto;
+      padding: 0 24px;
+    }
+    h1 { font-size: 2em; margin-bottom: 0.2em; }
+    h2 { font-size: 1.25em; margin-top: 2em; }
+    .meta { color: #888; font-size: 0.9em; margin-bottom: 2.5em; }
+    a { color: #0070f3; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-family: "SF Mono", "Fira Code", monospace;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.875em;
+    }
+    blockquote {
+      border-left: 3px solid #ddd;
+      margin: 0;
+      padding-left: 1.2em;
+      color: #555;
+    }
+    hr { border: none; border-top: 1px solid #eee; margin: 2.5em 0; }
+    footer { margin-top: 4em; font-size: 0.85em; color: #aaa; }
+  </style>
+</head>
+<body>
+
+<h1>My Second Brain OS</h1>
+<p class="meta">Anthony Giliberti · April 2026</p>
+
+<p>I spent a long time trying to make note-taking stick. The problem was never the tools — it was that no system connected what I knew, what I did each day, and what I was working on into something that actually built over time.</p>
+
+<p>So I built one. This is what I built and why it works for me.</p>
+
+<hr>
+
+<h2>The three ideas it's built on</h2>
+
+<p>Everything in my system comes from three thinkers whose work I combined:</p>
+
+<p><strong><a href="https://www.youtube.com/@nickmilo">Nick Milo's AIOS</a></strong> — the idea that your notes vault needs an orientation layer. A small folder that tells any AI (or any person) who you are, how the vault is structured, and what it can do. Three files: <code>me.md</code>, <code>vault-map.md</code>, <code>skill-map.md</code>. Every AI conversation starts by reading these. You never re-explain your context.</p>
+
+<p><strong><a href="https://www.myforevernotes.com">Matthias Hilse's ForeverNote</a></strong> — one file per calendar date, forever. <code>april-14.md</code> holds every April 14 I've ever recorded, stacked by year. My morning briefing, meetings, journal, and habits all build up in one file throughout the day — not assembled all at once. Five years from now, opening that file shows me everything from that date across every year.</p>
+
+<p><strong>A three-bucket knowledge base</strong> — inspired by Nick Milo's ideaverse: everything routes to Atlas (what I know), Calendar (what happened), or Efforts (what I'm working on). Drop a file in the inbox, the AI routes it. Meeting notes fan out across all three automatically.</p>
+
+<hr>
+
+<h2>What a day actually looks like</h2>
+
+<p>My morning starts with a briefing that writes itself into that day's ForeverNote — weather, tasks from Reminders, events from my calendar, a quote of the day. By the time I open Obsidian it's already there.</p>
+
+<p>When I finish a meeting I export the Apple Notes transcript and drop it in my inbox. A small CLI tool I wrote (<a href="https://github.com/ajgiliberti2/second-brain">brain</a>) routes it automatically — it creates a calendar entry for today, updates the person's page in my knowledge base, and links it to any relevant projects. I don't decide where it goes.</p>
+
+<p>Throughout the day, an iOS Shortcut prompts me to journal. It reads a pool of questions I've written (organized by day of the week, refreshed monthly by AI) directly from iCloud — no server, no API call — and records my answer as a file in the inbox. Krieger picks it up and appends it to the day's note.</p>
+
+<p>At the end of the day, <code>april-14.md</code> holds everything: weather, tasks, meetings with their notes, my journal entry, and habit tracking. Next April 14 it gets a new section. The file never moves.</p>
+
+<hr>
+
+<h2>The AI layer</h2>
+
+<p>I run everything locally. The routing, ingesting, and page-writing is handled by Gemma running on my Mac via <a href="https://ollama.ai">Ollama</a>. No meeting note, journal entry, or personal detail ever leaves my network.</p>
+
+<p>The system is deliberately AI-agnostic though. The vault is plain markdown. The CLI can point at any OpenAI-compatible endpoint. If I switch models tomorrow, nothing changes. The vault survives any tool change — that's the only design principle that matters long term.</p>
+
+<p>There's also a backend agent system (<a href="https://thefiggis.agency">The Figgis Agency</a>) that handles more complex automation — finance tracking, calendar coordination, security — but that's separate from the knowledge system and not required.</p>
+
+<hr>
+
+<h2>What I've learned</h2>
+
+<p>The thing that made this click was understanding that AI shouldn't be the system — it should be a tool the system uses. My vault is useful without AI. AI just makes the routing and ingesting faster so I actually do it.</p>
+
+<p>The orientation layer (AIOS) is underrated. The reason most AI note workflows feel broken is that you re-explain your context every conversation. When the vault holds that context in files the AI reads first, every interaction starts from the right place.</p>
+
+<p>And ForeverNote solved something I didn't know I was fighting: the blank page. My daily note isn't blank when I open it — it already has structure and content that arrived throughout the morning. I'm filling in gaps, not starting over.</p>
+
+<hr>
+
+<h2>If you want to build something similar</h2>
+
+<p>The vault structure and CLI are open source. The framework is tool-agnostic — Obsidian, VS Code, or any markdown editor works. Local LLM or cloud API, your choice.</p>
+
+<p>→ <a href="https://github.com/ajgiliberti2/second-brain-os">second-brain-os</a> — vault template and this writeup<br>
+→ <a href="https://github.com/ajgiliberti2/second-brain">second-brain</a> — the brain CLI (Python, MIT)</p>
+
+<p>The best starting point is <code>me.md</code>. Fill in who you are and how you work. Everything else builds from that.</p>
+
+<hr>
+
+<footer>
+  Built on the work of <a href="https://www.youtube.com/@nickmilo">Nick Milo</a>, <a href="https://www.myforevernotes.com">Matthias Hilse</a>, and <a href="https://karpathy.ai">Andrej Karpathy</a>.
+  MIT license.
+</footer>
+
+</body>
+</html>
