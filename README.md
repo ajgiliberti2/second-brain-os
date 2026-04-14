@@ -1,63 +1,101 @@
-# My Second Brain OS
+# Second Brain OS
 
-*Anthony Giliberti · April 2026*
+A personal knowledge framework built on three ideas: [Nick Milo's AIOS](https://www.youtube.com/@nickmilo), [Matthias Hilse's ForeverNote](https://www.myforevernotes.com), and a three-bucket knowledge base. Works with any AI tool. No app required — just markdown files.
 
-I spent a long time trying to make note-taking stick. The problem was never the tools — it was that no system connected what I knew, what I did each day, and what I was working on into something that actually built over time.
-
-So I built one. This is what I built and why it works for me.
+**To set it up:** copy the prompt below and paste it into Claude, ChatGPT, Gemini, or any AI you use. It will build the framework for you.
 
 ---
 
-## The three ideas it's built on
+## The Prompt
 
-Everything in my system comes from three thinkers whose work I combined:
-
-**Nick Milo's AIOS** ([nickmilo](https://www.youtube.com/@nickmilo)) — the idea that your notes vault needs an orientation layer. A small folder that tells any AI (or any person) who you are, how the vault is structured, and what it can do. Three files: `me.md`, `vault-map.md`, `skill-map.md`. Every AI conversation starts by reading these. You never re-explain your context.
-
-**Matthias Hilse's ForeverNote** ([myforevernotes.com](https://www.myforevernotes.com)) — one file per calendar date, forever. `april-14.md` holds every April 14 I've ever recorded, stacked by year. My morning briefing, meetings, journal, and habits all build up in one file throughout the day — not assembled all at once. Five years from now, opening that file shows me everything from that date across every year.
-
-**A three-bucket knowledge base** — inspired by Nick Milo's ideaverse: everything routes to Atlas (what I know), Calendar (what happened), or Efforts (what I'm working on). Drop a file in the inbox, the AI routes it. Meeting notes fan out across all three automatically.
+````
+I want to set up a personal knowledge system called Second Brain OS. It's built on three frameworks. Please help me create it step by step.
 
 ---
 
-## What a day actually looks like
+## Framework 1: AIOS (Orientation Layer)
+*Credit: Nick Milo (youtube.com/@nickmilo)*
 
-My morning starts with a briefing that writes itself into that day's ForeverNote — weather, tasks from Reminders, events from my calendar, a quote of the day. By the time I open Obsidian it's already there.
+Create a folder called AIOS/ inside my vault with these files:
 
-When I finish a meeting I export the Apple Notes transcript and drop it in my inbox. A small CLI tool I wrote ([brain](https://github.com/ajgiliberti2/second-brain)) routes it automatically — it creates a calendar entry for today, updates the person's page in my knowledge base, and links it to any relevant projects. I don't decide where it goes.
+**AIOS/me.md** — Ask me: my name, role, location, how I like to work, my current focus, and what tools I use (calendar, tasks, editor). Fill in my answers. This file is read-only for AI — only I edit it.
 
-Throughout the day, an iOS Shortcut prompts me to journal. It reads a pool of questions I've written (organized by day of the week, refreshed monthly by AI) directly from iCloud — no server, no API call — and records my answer as a file in the inbox. That gets picked up and appended to the day's note.
+**AIOS/vault-map.md** — Document the vault structure we're building:
+- atlas/ — permanent knowledge (people, concepts, domains)
+- calendar/ — time-indexed notes (daily notes, meetings)  
+- efforts/ — active projects and goals
+- inbox/ — drop files here, AI routes them
+- inbox/archive/ — processed files land here
+- AIOS/ — this orientation layer
+Include file naming conventions, note format rules, and inbox flow.
 
-At the end of the day, `april-14.md` holds everything: weather, tasks, meetings with their notes, my journal entry, and habit tracking. Next April 14 it gets a new section. The file never moves.
+**AIOS/skill-map.md** — An index of skills in this vault. Start with:
+- ForeverNote (Framework) — the daily note pattern
+- Meeting Notes (Workflow) — routes meetings across all three buckets
+- Journal Prompts (Data) — rotating daily prompts
 
----
+**AIOS/skills/forevernote.md** — Document the ForeverNote pattern (see Framework 2 below).
 
-## The AI layer
+**AIOS/skills/journal-prompts.md** — Create a pool of 7-10 journal prompts for each day of the week. Monday: intention-setting. Tuesday: challenge. Wednesday: mid-week check-in. Thursday: progress. Friday: reflection. Saturday: personal. Sunday: preparation. Format each day as `## Monday` with `- prompt` bullet lines.
 
-I run everything locally. The routing, ingesting, and page-writing is handled by Gemma running on my Mac via [Ollama](https://ollama.ai). No meeting note, journal entry, or personal detail ever leaves my network.
-
-The system is deliberately AI-agnostic though. The vault is plain markdown. The CLI can point at any OpenAI-compatible endpoint. If I switch models tomorrow, nothing changes. The vault survives any tool change — that's the only design principle that matters long term.
-
----
-
-## What I've learned
-
-The thing that made this click was understanding that AI shouldn't be the system — it should be a tool the system uses. My vault is useful without AI. AI just makes the routing and ingesting faster so I actually do it.
-
-The orientation layer (AIOS) is underrated. The reason most AI note workflows feel broken is that you re-explain your context every conversation. When the vault holds that context in files the AI reads first, every interaction starts from the right place.
-
-And ForeverNote solved something I didn't know I was fighting: the blank page. My daily note isn't blank when I open it — it already has structure and content that arrived throughout the morning. I'm filling in gaps, not starting over.
-
----
-
-## If you want to build something similar
-
-The vault structure and CLI are open source. The framework is tool-agnostic — Obsidian, VS Code, or any markdown editor works. Local LLM or cloud API, your choice.
-
-→ [second-brain](https://github.com/ajgiliberti2/second-brain) — the `brain` CLI (Python, MIT)
-
-The best starting point is `me.md`. Fill in who you are and how you work. Everything else builds from that.
+At the root of the vault, create **CLAUDE.md** (or the equivalent for your AI tool) containing one line: `Read AIOS/me.md.`
 
 ---
 
-*Built on the work of [Matthias Hilse](https://www.myforevernotes.com), [Nick Milo](https://www.youtube.com/@nickmilo), and [Andrej Karpathy](https://karpathy.ai). MIT license.*
+## Framework 2: ForeverNote (Daily Container)
+*Credit: Matthias Hilse (myforevernotes.com)*
+
+One file per calendar date, forever. The file is named `month-day.md` (e.g. `april-14.md`) and lives in calendar/. Every year stacks as a new `## YYYY` section inside the same file — the filename never changes.
+
+Each day's file follows this section structure:
+```
+# Month Day
+
+## YYYY
+
+### 🌤️ Weather
+### ✅ Tasks
+### 📅 Today's Events
+### 📰 News
+### 💬 Quote of the Day
+### 📓 Journal
+### 💪 Habits
+### 📝 Meetings
+```
+
+The note builds incrementally throughout the day — different sections filled by different sources at different times. It is never assembled all at once.
+
+Create today's ForeverNote for me now using this structure.
+
+---
+
+## Framework 3: Three-Bucket Knowledge Base
+
+Create the three bucket folders with schema files:
+
+**atlas/schema.md** — Route here for permanent knowledge: people, concepts, technologies, decisions, domains. Not time-indexed.
+
+**calendar/schema.md** — Route here for time-indexed content. File naming: `month-day.md`. The ForeverNote pattern applies.
+
+**efforts/schema.md** — Route here for active projects and goals. Status: Active, On Hold, or Complete.
+
+The routing rule: when content touches more than one bucket (e.g. a meeting involves a date, a person, and a project), write to all relevant buckets in one pass. Meeting notes always fan out to all three.
+
+---
+
+## After Setup
+
+Once the structure is created, here's how to use it day to day:
+
+- **Drop anything into inbox/** — a meeting note, an article, a voice memo transcript, any text. Ask your AI to route and ingest it.
+- **Each morning** — ask your AI to create today's ForeverNote and fill in the weather, tasks, and events sections.
+- **After a meeting** — paste your notes and ask your AI to update the calendar entry, create or update the person's atlas page, and link to any relevant efforts.
+- **Journaling** — open AIOS/skills/journal-prompts.md, find today's day of the week, pick a prompt, and write your answer in the Journal section of today's ForeverNote.
+- **To ask questions** — "what did I discuss with [name]?", "what are my active efforts?", "what was I working on last month?" — your AI reads the vault and answers.
+
+The vault is plain markdown. It works with Obsidian, VS Code, iA Writer, or any text editor. The AI is a tool the system uses — not the system itself.
+````
+
+---
+
+*Framework by Anthony Giliberti. Built on the work of [Matthias Hilse](https://www.myforevernotes.com), [Nick Milo](https://www.youtube.com/@nickmilo), and [Andrej Karpathy](https://karpathy.ai). MIT license.*
