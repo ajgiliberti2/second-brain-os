@@ -4,11 +4,13 @@
 
 ---
 
-I've been experimenting with AI tools for knowledge work long enough to know the pattern. You ask a question, you get a confident answer, you move on. A week later you ask a related question and get a slightly different answer. You paste in a document for context, get a great summary, then close the tab and lose it forever.
+I've spent years trying to build a knowledge system that actually sticks. I went deep on Tiago Forte's PARA model. I built out structured routines for my year, quarter, month, week, and day. I take handwritten notes. I use Reminders religiously for GTD. More recently I came across Matthias Hilse's ForeverNote framework and it changed how I thought about daily notes entirely.
 
-The deeper problem isn't the model. It's that every conversation starts cold. The AI doesn't know what you already know, what you decided last month, or what you're actively working on. You end up re-explaining your context every single time, or worse, you stop bothering and just trust whatever it generates.
+All of it was manual. And most of it, eventually, got lost.
 
-That's not a fundamental limitation of AI. It's a limitation of how we're using it.
+The meetings I took notes in. The decisions I reasoned through. The research I did twice because I couldn't find the first version. The context I rebuilt from scratch every time I opened a new AI conversation. There's a version of this problem that's about discipline, but I don't think that's actually the issue. The issue is that none of these systems were connected to each other, and none of them had memory.
+
+That's what this is about. Not another productivity framework. A system that actually holds onto what you put in it.
 
 ---
 
