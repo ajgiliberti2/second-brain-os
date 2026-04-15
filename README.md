@@ -121,6 +121,8 @@ I ran `brain process-inbox`. Here's what happened:
 
 That took about 30 seconds. The work version of this system handled a 40-page threat intelligence report the same way: source page, gap analysis, presentation outline, in about 20 minutes of conversation. The difference isn't speed. It's that the output is grounded in actual vault context, not generic analysis.
 
+Another example that surprised me: I loaded the NIST guidelines, our information security standard, and the procedure documents I own into the vault. Then I asked it where we had gaps and where our coverage was thin. It cross-referenced all three, identified the areas where our procedures didn't map cleanly to the standard, and flagged where the standard had requirements we hadn't addressed in any procedure. That kind of analysis would have taken days to do manually. With a well-curated vault it took one conversation, and the reasoning was traceable back to actual source documents, not the model's general knowledge of NIST.
+
 ---
 
 ## Principles Behind the Design
