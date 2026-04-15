@@ -28,7 +28,7 @@ Every answer you get is grounded in files you've actually read, reviewed, and or
 
 ## The Architecture
 
-*Framework by [[Nick Milo](https://youtube.com/@linkingyourthinking?si=j8GRyC6qQujp7uUP)*
+*Framework by [Nick Milo](https://youtube.com/@linkingyourthinking?si=j8GRyC6qQujp7uUP)*
 
 The vault lives in iCloud, opened in Obsidian. The AI layer is Claude, running with a `CLAUDE.md` at the vault root that points it to the orientation layer first.
 
