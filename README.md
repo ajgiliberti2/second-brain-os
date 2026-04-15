@@ -187,5 +187,3 @@ If you're a knowledge worker who finds yourself re-explaining context, re-doing 
 ---
 
 *The thought process here is inspired by [Nick Milo's AIOS Framework](https://youtube.com/@linkingyourthinking?si=j8GRyC6qQujp7uUP) and [Matthias Hilse's ForeverNote](https://www.myforevernotes.com). The specific implementation is my own. Inspired by [Andrej Karpathy's](https://karpathy.ai) approach to publishing thinking in progress.*
-
-*The vault structure and `brain` CLI are open source: [second-brain-os](https://github.com/ajgiliberti2/second-brain-os) · [second-brain](https://github.com/ajgiliberti2/second-brain)*
