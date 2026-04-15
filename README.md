@@ -3,7 +3,7 @@
 *Anthony Giliberti · April 2026*
 
 ---
-
+ 
 I've spent years trying to build a knowledge system that actually sticks. I went deep on Tiago Forte's PARA model. I built out structured routines for my year, quarter, month, week, and day. I take handwritten notes. I use Reminders religiously for GTD. I kept a bullet journal for habit tracking. More recently I came across Matthias Hilse's ForeverNote framework and it changed how I thought about daily notes entirely.
 
 All of it was manual. And most of it, eventually, got lost.
